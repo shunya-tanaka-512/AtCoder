@@ -1,12 +1,29 @@
-function main(input) {
-  input = input.split(""); //[ '1', '0', '1' ]
+process.stdin.resume();
+process.stdin.setEncoding("utf8");
+
+var input_lines = []; //標準入力から受け取ったデータを格納する配列
+var reader = require("readline").createInterface({
+  //requireという処理でreadlineという機能を用いて標準入力からデータを受け取る
+  input: process.stdin,
+  output: process.stdout,
+});
+
+// ーーーー入力ーーーー
+
+reader.on("line", (line) => {
+  //line変数には標準入力から渡された一行のデータが格納されている
+  input_lines = line.split(""); //ここで、input_lines配列に、標準入力から渡されたデータが入る
+});
+
+// ーーーー出力ーーーー
+reader.on("close", () => {
+  //受け取ったデータを用いて処理を行う
   //１が書かれてたらカウント、それ以外ならカウントしない
-  var a = 0;
-  for (let i = 0; i < input.length; i++) {
-    if (input[i] == 1) {
-      a += 1;
+  let count = 0;
+  for (let i = 0; i < input_lines.length; i++) {
+    if (input_lines[i] == 1) {
+      count += 1;
     }
   }
-  console.log(a);
-}
-main(require("fs").readFileSync("/dev/stdin", "utf8"));
+  console.log(count);
+});
