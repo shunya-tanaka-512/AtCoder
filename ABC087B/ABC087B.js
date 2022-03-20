@@ -18,19 +18,31 @@ reader.on("line", (line) => {
 // ーーーー出力ーーーー
 reader.on("close", () => {
   //受け取ったデータを用いて処理を行う
-  const [a, b, c, x] = input_lines;
+  const [yen500Num, yen100Num, yen50Num, yenSum] = input_lines;
+  const FIVE_HUNDRED = 500;
+  const ONE_HUNDRED = 100;
+  const FIFTY = 50;
   let count = 0;
-  for (let i = 0; i <= a; i++) {
-    if (500 * i > x) {
+  for (let i = 0; i <= yen500Num; i++) {
+    //答えゼロパターン：合計金額に持っている硬貨が足りない時
+    if (yen500Num * FIVE_HUNDRED + yen100Num * ONE_HUNDRED + yen50Num * FIFTY < yenSum) {
       break;
     }
-    tmp = x - 500 * i;
-    for (let j = 0; j <= b; j++) {
-      if (100 * j > tmp) {
+    //答えゼロパターン：合計金額が150円とかなのに50円持ってない時
+    else if ((yenSum / 50) % 2 != 0 && yen50Num == 0) {
+      break;
+    } else {
+      if (FIVE_HUNDRED * i > yenSum) {
         break;
       }
-      if (tmp - 100 * j <= 50 * c) {
-        count += 1;
+      let targetSum = yenSum - FIVE_HUNDRED * i;
+      for (let j = 0; j <= yen100Num; j++) {
+        if (ONE_HUNDRED * j > targetSum) {
+          break;
+        }
+        if (targetSum - ONE_HUNDRED * j <= 50 * yen50Num) {
+          count += 1;
+        }
       }
     }
   }
