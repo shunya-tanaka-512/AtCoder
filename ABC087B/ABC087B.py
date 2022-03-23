@@ -26,5 +26,4 @@ for i in range(yen500_num + 1):
         if remain100 <= 50 * yen50_num:
             if remain100 % 50 == 0:
                 count += 1
-
 print(count)
