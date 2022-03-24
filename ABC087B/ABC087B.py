@@ -9,7 +9,10 @@ FIFTY = 50
 count = 0
 for i in range(yen500_num + 1):
     # 答えゼロパターン：合計金額に持っている硬貨が足りない時
-    if yen500_num * FIVE_HUNDRED + yen100_num * ONE_HUNDRED + yen50_num * FIFTY < yen_sum:
+    if (
+        yen500_num * FIVE_HUNDRED + yen100_num * ONE_HUNDRED + yen50_num * FIFTY
+        < yen_sum
+    ):
         break
     # 答えゼロパターン：合計金額が150円とかなのに50円持ってない時
     elif yen_sum / 50 % 2 != 0 and yen50_num == 0:
