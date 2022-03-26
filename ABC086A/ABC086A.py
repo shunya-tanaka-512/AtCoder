@@ -1,5 +1,5 @@
-int_val_1, int_val_2 = map(int, input().split())
-if int_val_1 % 2 != 0 and int_val_2 % 2 != 0:
-    print("Odd")
-else:
-    print("Even")
+def odd_even(x, y):
+    if x % 2 != 0 and y % 2 != 0:
+        return "Odd"
+    else:
+        return "Even"
