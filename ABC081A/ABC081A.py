@@ -1,8 +1,7 @@
-input_list = []
-for i in input():
-    input_list.append(int(i))  # [1, 1, 0]
-count = 0
-for input in input_list:
-    if input == 1:
-        count += 1
-print(count)
+def placing_marbles(input_num):
+    input_list = [int(i) for i in str(input_num)]  # 文字列を一文字ずつ取り出してint()処理
+    count = 0
+    for input in input_list:
+        if input == 1:
+            count += 1
+    return count
