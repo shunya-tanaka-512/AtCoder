@@ -1,4 +1,2 @@
-a = int(input())
-b, c = map(int, input().split())
-s = input()
-print(a+b+c,s)
+def data_processing(a, b, c, s):
+    return a + b + c, s
