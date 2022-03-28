@@ -1,7 +1,7 @@
-from ABC081A import placing_marbles
+from ABC081A import get_number_of_marbles
 
 
-def test_placing_marbles():
-    assert placing_marbles(101) == 2
-    assert placing_marbles(000) == 0
-    assert placing_marbles(111) == 3
+def test_get_number_of_marbles():
+    assert get_number_of_marbles(101) == 2
+    assert get_number_of_marbles(000) == 0
+    assert get_number_of_marbles(111) == 3
