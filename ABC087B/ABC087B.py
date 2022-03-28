@@ -1,4 +1,4 @@
-def coins_count(yen500_num, yen100_num, yen50_num, yen_sum):
+def get_pattern_select_coins(yen500_num, yen100_num, yen50_num, yen_sum):
 
     FIVE_HUNDRED = 500
     ONE_HUNDRED = 100

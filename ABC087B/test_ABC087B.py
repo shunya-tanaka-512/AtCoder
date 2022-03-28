@@ -1,7 +1,7 @@
-from ABC087B import coins_count
+from ABC087B import get_pattern_select_coins
 
 
-def test_coins_count():
-    assert coins_count(2, 2, 2, 100) == 2
-    assert coins_count(5, 1, 0, 150) == 0
-    assert coins_count(30, 40, 50, 6000) == 213
+def test_get_pattern_select_coins():
+    assert get_pattern_select_coins(2, 2, 2, 100) == 2
+    assert get_pattern_select_coins(5, 1, 0, 150) == 0
+    assert get_pattern_select_coins(30, 40, 50, 6000) == 213
