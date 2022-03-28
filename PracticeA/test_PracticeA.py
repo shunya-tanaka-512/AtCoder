@@ -1,6 +1,6 @@
-from PracticeA import data_processing
+from PracticeA import process_data
 
 
-def test_data_processing():
-    assert data_processing(1, 2, 3, "test") == (6, "test")
-    assert data_processing(72, 128, 256, "myonmyon") == (456, "myonmyon")
+def test_process_data():
+    assert process_data(1, 2, 3, "test") == (6, "test")
+    assert process_data(72, 128, 256, "myonmyon") == (456, "myonmyon")
