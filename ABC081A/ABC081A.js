@@ -12,7 +12,7 @@ var reader = require("readline").createInterface({
 
 reader.on("line", (line) => {
   //line変数には標準入力から渡された一行のデータが格納されている
-  input_lines = line.split(""); //ここで、input_lines配列に、標準入力から渡されたデータが入る
+  input_lines = line; //ここで、input_lines配列に、標準入力から渡されたデータが入る
 });
 
 // ーーーー出力ーーーー
