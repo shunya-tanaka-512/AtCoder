@@ -1,4 +1,4 @@
-def get_score_diff(*scores):  # scoresはtuple
+def get_score_diff(scores: list) -> int:
     # 奇数回は足す、偶数回は引く
     score_diff = 0
     new_scores = sorted(scores, reverse=True)  # sortedはlistを返す
