@@ -1,6 +1,10 @@
 s = input()
-for i in range(1, 7):
-    new_s = s * i
-    if len(new_s) == 6:
-        print(new_s)
-        break
+if len(s) == 1:
+    s = s * 6
+    print(s)
+elif len(s) == 2:
+    s = s * 3
+    print(s)
+else:
+    s = s * 2
+    print(s)
