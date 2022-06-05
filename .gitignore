@@ -3,3 +3,6 @@ py310/
 
 #__pycache__のディレクトリを除外
 __pycache__/
+
+.vscode/settings.json
+Contest/atcoder.py
