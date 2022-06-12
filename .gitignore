@@ -5,4 +5,4 @@ py310/
 __pycache__/
 
 .vscode/settings.json
-Contest/atcoder.py
+Contest/
