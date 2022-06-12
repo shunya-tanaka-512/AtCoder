@@ -1,2 +1,2 @@
-n = input()
-print(n[-2:])
+N = int(input())
+print(str(N % 100).zfill(2))
