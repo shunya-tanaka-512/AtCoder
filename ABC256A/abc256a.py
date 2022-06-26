@@ -1,2 +1,2 @@
 N = int(input())
-print(2 ** N)
+print(pow(2, N))
