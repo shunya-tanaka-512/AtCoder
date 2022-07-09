@@ -1,8 +1,8 @@
+import datetime
+
+
 K = int(input())
-if K >= 60:
-    MM = 21 + (K // 60)
-    HH = str(K % 60).zfill(2)
-else:
-    MM = 21
-    HH = str(K).zfill(2)
-print(f"{MM}:{HH}")
+dt = datetime.datetime(2022, 7, 2, 21)
+td_Km = datetime.timedelta(minutes=K)
+dt_Km = dt + td_Km
+print(dt_Km.strftime("%H:%M"))
