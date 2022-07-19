@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 
+# 受験者クラス
 class Examinee:
     def __init__(self, id: int, math: int, english: int) -> None:
         self.id = id
